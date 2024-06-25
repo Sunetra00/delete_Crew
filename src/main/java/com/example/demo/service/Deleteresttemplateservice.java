@@ -10,10 +10,10 @@ import org.springframework.web.client.RestTemplate;
 public class Deleteresttemplateservice {
 
 	RestTemplate resttemplate = new RestTemplate();
-	final String URL = "/ddboperation";
+	final String URL = "http://dynamodbupdater/ddboperation";
 
-	public void deleteCrew(int id) {
-		Map<String, Integer> param = new HashMap<String, Integer>();
+	public void deleteCrew(String id) {
+		Map<String, String> param = new HashMap<String, String>();
 		param.put("crewid", id);
 		resttemplate.delete(URL, param);
 

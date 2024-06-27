@@ -53,6 +53,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - echo $REPOSITORY_URI:$IMAGE_TAG
+      - sudo systemctl start docker
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - printf '[{"name":"<container-name>","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json

@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: deleteCrew
+  name: deletecrew
   namespace: eksapp
   annotations:
     service.beta.kubernetes.io/aws-load-balancer-type: alb

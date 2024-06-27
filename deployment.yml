@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deleteCrew
+  name: deletecrew
   namespace: eksapp
   labels:
-    app: deleteCrew
+    app: deletecrew
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: deleteCrew
+      app: deletecrew
   template:
     metadata:
       labels:
-        app: deleteCrew
+        app: deletecrew
     spec:
       containers:
-        - name: deleteCrew
+        - name: deletecrew
           image: 265083127752.dkr.ecr.ap-south-1.amazonaws.com/ecr-delete-crew-repo:latest
           imagePullPolicy: Always
           ports:
